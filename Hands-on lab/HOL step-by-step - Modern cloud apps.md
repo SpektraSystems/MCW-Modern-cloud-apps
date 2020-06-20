@@ -165,33 +165,33 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 3. Select the **ContosoSportsDB** SQL Database.
 
-    ![The contososports Resource Group blade with the "ContosoSportsDB" highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image22.png "Azure Portal")
+  ![](media/mca1.png)
 
 4. On the **SQL Database** blade, select the **Show database connection strings** link.
 
-    ![On the SQL Database blade, in the left pane, Overview is selected. In the right pane, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image23.png "SQL Database blade")
+  ![](media/mca2.png)
 
 5. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **demo@pass123**, respectively.
 
-    ![In the Database connection strings blade, the ADO.NET connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image24.png "Database connection strings blade")
+  ![](media/mca3.png)
 
 6. Go back to the **contososports** resource group blade, and select the **contososports** SQL Server.
 
-    ![The contososports resource group with the contososports sql server highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/2019-11-15-17-47-46.png "Azure Portal")
+  ![](media/mca4.png)
 
 7. On the **Overview** screen of the **SQL Server** blade, select **Set server firewall** link at the top.
 
-    ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a box.](media/2019-03-31-14-37-31.png "SQL Server Blade, Essentials section")
+  ![](media/mca5.png)
 
 8. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
-    ![Screenshot of the Rule name, Start IP. and End IP fields on the Firewall Settings blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image27.png "Firewall Settings blade")
+  ![](media/mca6.png)
 
     >**Note**: This is only done to make the lab easier to do. In production, you do **NOT** want to open your SQL Database to all IP Addresses this way. Instead, you will want to specify just the IP Addresses you wish to allow through the Firewall.
 
 9. Select **Save**.
 
-    ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
+  ![](media/mca7.png)
 
 10. Update progress can be found by selecting the **Notifications** link located at the top of the page.
 
@@ -205,17 +205,15 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 2. On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option.
 
-    ![In the Storage account blade, under Settings, Access keys is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image35.png "Storage account blade")
+On the **Access keys** blade, select the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
 
-3. On the **Access keys** blade, select the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
-
-    ![In the Access keys blade default keys section, the copy button for the key1 connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image36.png "Access keys blade, default keys section")
+  ![](media/mca8.png)
 
 #### Subtask 3: Retrieve Service Bus Queue Connection String
 
 1. Go back to the **contososports** blade resource group, and select the **contoso** Service Bus Namespace.
 
-    ![Service Bus Namespace resource is highlighted](media/2020-03-18-10-38-09.png "Service Bus Namespace")
+  ![](media/mca9.png)
 
 2. Select the **Queues** link under Entities.
 
@@ -223,23 +221,19 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 3. On the **Queues** pane, select the **receiptgenerator** Service Bus Queue.
 
-    ![receiptgenerator queue is highlighted](media/2020-03-18-10-40-40.png "receiptgenerator queue is highlighted")
+  ![](media/mca10.png)
 
-4. On the **receiptgenerator** Service Bus Queue blade, select the **Shared access policies** link under Settings.
+4. On the **receiptgenerator** Service Bus Queue blade, select the **Shared access policies** link under Settings. Then open the **Publisher** shared access policy.
 
-    ![Shared access policies link is shown](media/2020-03-18-10-42-03.png "Shared access policies link is shown")
+  ![](media/mca11.png)
 
-5. Select the **Publisher** shared access policy.
-
-    ![Publisher policy is highlighted](media/2020-03-18-10-43-12.png "Publisher policy is highlighted")
-
-    >**Note**: The _Publisher_ and _Listener_ shared access policies for the Azure Service Bus Queue were deployed as part of the ARM Template that was used to setup the lab environment. As you can see, the **Publisher** policy that we're copying the connection string for, only has permissions to _Send_ messages to the queue.
+>**Note**: The _Publisher_ and _Listener_ shared access policies for the Azure Service Bus Queue were deployed as part of the ARM Template that was used to setup the lab environment. As you can see, the **Publisher** policy that we're copying the connection string for, only has permissions to _Send_ messages to the queue.
     >
     > By default, no policies are created. Additionally, it is best practice to use least privilege security to create separate shared access policies for publishers sending messages and listeners receiving messages from the queue. 
 
 6. On the **SAS Policy** pane, copy the **Primary Connection String**. Paste the value into **Notepad** for later usage. 
 
-    ![Primary Connection String is highlighted](media/2020-03-18-10-54-39.png "Primary Connection String is highlighted")
+  ![](media/mca12.png)
 
 #### Subtask 4: Update the configuration in the starter project
 
@@ -247,14 +241,14 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 2. Select the **contosoapp** web app (**App Service** type).
 
-    ![Resources listed for ContosoSports. Web app selected.](media/2019-04-19-13-46-40.png "Resources listed for ContosoSports")
+  ![](media/mca13.png)
 
 3. Copy the web app URL to Notepad.
 
     - Select the **Overview** link.
     - Copy the URL to Notepad for later use. Use the **Copy to clipboard** link.
 
-    ![In the Web App Overview settings, the URL has a box around the link.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
+  ![](media/mca14.png)
 
 4. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, select **Configuration**.
 
@@ -266,11 +260,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Value: Enter the Connection String for the **Azure Service Bus Queue** just created.
 
-    ![In the App settings section for the App Service blade, the new entry for AzureQueueConnectionString is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image40.png "App settings section")
+  ![](media/mca15.png)
 
 6. Locate **Connection Strings** section below **Application Settings**.
 
-    ![The Connection Strings section for the App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image41.png "Connection Strings section")
+  ![](media/mca16.png)
 
 7. Add a new **Connection String** with the following values:
 
@@ -282,51 +276,45 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously.
 
-    ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
+  ![](media/mca17.png)
 
 8. Select **Save**.
 
+  ![](media/mca18.png)
+
 #### Subtask 5: Deploy the e-commerce Web App from Visual Studio
 
-1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio.
+1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
 
     ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](media/2019-04-19-14-03-04.png "Solution Explorer")
 
-2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
+2. Click on **Start** button.
 
-    >**Note**: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure subscription.
-    > 
-    > ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
+  ![](media/mca48.png)
 
-3. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Create Profile** at the bottom of the wizard.
+3. Choose **Azure - Publish your application to the Microsoft cloud**.
 
-    ![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
+  ![](media/mca31.png)
 
-4. If prompted, log on with your Azure Subscription credentials.
+4. Now choose **Azure App Service (Windows)**.
 
-    ![App Service Select Existing App Service dialog is displayed. The Sign In link is highlighted](media/2019-04-19-14-07-19.png "Azure Sign In")
+  ![](media/mca49.png)
 
-    >**Note**: If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
+5. Select the **Contoso Sports Web App** (with the name you created previously) and click on **Finish**.
 
-5. Select the **Contoso Sports Web App** (with the name you created previously).
+  ![](media/mca50.png)
 
-    ![Under Subscriptions, under contososports, contososportsweb0 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image49.png "Subscriptions")
+6. Select **Publish** to publish the Web application.
 
-6. Select **OK**.
+  ![](media/mca51.png)
 
-7. Select **Publish** to publish the Web application.
+7. In the Visual Studio **Web Publish Activity** view, you will see a status that indicates the Web App was published successfully.
 
-    >**Note**: If prompted with a warning about App Service supporting .NET Core 3.0.0, select **OK** to dismiss the warning.
-    >
-    > ![App Service .NET Core 3.0.0 support warning.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/2019-11-15-18-12-21.png "App Service .NET Core 3.0.0 support warning")
-
-8. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
-
-    ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
+  ![](media/mca52.png)
 
     >**Note**: Your URL will differ from the one shown in the Output screenshot because it must be globally unique.
 
-9. A new browser should automatically open the new web applications. Validate the website by choosing the **Store** link on the menu. You should see product items. If products are returned, then the connection to the database is successful.
+8. A new browser should automatically open the new web applications. Validate the website by choosing the **Store** link on the menu. You should see product items. If products are returned, then the connection to the database is successful.
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
@@ -364,57 +352,53 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![the Target server Configure required settings option is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image55.png "Target server option")
 
-7. On the **New server** blade, specify the following configuration:
+7. On the **New server** blade, specify the following configuration and then click on **Select**.
 
-   - Server name: **A unique value (ensure the green checkmark appears)**.
+   - Server name: **contososqlserver-{uniqueid} (for example:contososqlserver-192372  )**.
 
    - Server admin login: **demouser**
 
    - Password and Confirm Password: **demo@pass123**
 
-    ![The fields in the New Server blade display with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image56.png "New Server blade")
+  ![](media/mca19.png)
 
-8. Once the values are accepted in the **New server** blade, choose **Select**.
+8. On the **Create secondary** blade, select **OK**.
 
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-9. On the **Create secondary** blade, select **OK**.
-
-    ![Screenshot of the OK button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image57.png "OK button")
+  ![](media/mca20.png)
 
     > **Note**: The Geo-Replication will take a few minutes to complete.
 
-10. After the Geo-Replication has finished provisioning, select **SQL Databases** in the navigation menu to the left.
+9. After the Geo-Replication has finished provisioning, select **SQL Databases** in the navigation menu to the left.
 
     ![The SQL databases option in the Azure Portal navigation menu](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image52.png "SQL Databases")
 
-11. Select the name of the Secondary SQL Database you just created.
+10. Select the name of the Secondary SQL Database you just created.
 
-    ![In the list of Databases, the ContosoSportsDB secondary replication role is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image58.png "Database list")
+  ![](media/mca21.png)
 
-12. On the SQL database blade in the Essentials section, select the SQL Database Server name link.
+11. On the SQL database blade in the Essentials section, select the SQL Database Server name link.
 
-    ![On the SQL database blade in the Essentials section, the Server name (contososqlserver2.database.windows.net) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image61.png "SQL database blade, Essentials section")
+  ![](media/mca22.png)
 
-13. On the **SQL Server** blade, within the **Overview** pane, select **Show firewall settings** link.
+12. On the **SQL Server** blade, within the **Overview** pane, select **Show firewall settings** link.
 
-    ![On the SQL Server blade, at the top, the Set server firewall tile is boxed in red.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image62.png "SQL Server blade, Essentials section")
+  ![](media/mca23.png)
 
-14. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
+13. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
-    ![On the Firewall Settings blade, in the New rule section, a new rule has been created with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image27.png "New rule section ")
+  ![](media/mca6.png)
 
     >**Note**: This is only done to make the lab easier to do. In production, you do **NOT** want to open your SQL Database to all IP Addresses this way. Instead, you will want to specify just the IP Addresses you wish to allow through the Firewall.
 
-15. Select **Save**.
+14. Select **Save**.
 
-    ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
+  ![](media/mca7.png)
 
-16. Update progress can be found by choosing the **Notifications** link located at the top of the page.
+15. Update progress can be found by choosing the **Notifications** link located at the top of the page.
 
     ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
-17. Close all configuration blades.
+16. Close all configuration blades.
 
 #### Subtask 2: Setup SQL Failover Group
 
@@ -428,55 +412,52 @@ With SQL Database Geo-Replication configured, the Azure SQL Failover Groups feat
 
 3. On the **SQL database** blade, within the **Overview** pane, select the **Server name**.
 
-    ![SQL database blade with server name highlighted](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/primarysqldatabaseserverlink.png "SQL database blade with server name highlighted")
+  ![](media/mca22.png)
 
-4. On the **SQL server** blade, select **Failover groups** under **Settings**.
+4. On the **SQL server** blade, select **Failover groups** under **Settings** and then click on the **Add group** button.
 
-    ![Failover groups setting option](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlserverfailovergroupslink.png "Failover groups setting option")
+  ![](media/mca24.png)
 
-5. On the **Failover groups** pane, select the **Add group** button.
+5. On the **Failover group** pane:
 
-    ![Add group button](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/failovergroupsaddgroupbutton.png "Add group buton")
+ - Enter **contosofailovergroup-{uniqueid}**.
+ - Select **Secondary server**, then choose the **Secondary SQL Database** that was previously created.
 
-6. On the **Failover group** pane, enter a unique **Failover group name**.
+  ![](media/mca25.png)
+  
+ - Select **Database within the group**, then choose the **ContosoSportsDB** database, then click **Select**.
 
-    ![Failover group name field](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailovergroupname.png "Failover group name field")
+  ![](media/mca26.png)
 
-7. Select **Secondary server**, then choose the **Secondary SQL Database** that was previously created.
+6. Review and then select **Create** to create the SQL Failover Group.
 
-    ![Secondary SQL Database is highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailoversecondaryserver.png "Secondary SQL Database is highlighted")
+  ![](media/mca27.png)
 
-8. Select **Database within the group**, then choose the **ContosoSportsDB** database, then click **Select**.
+7. Once the Failover Group has been created, select it in the list.
 
-    ![Steps to choose the ContosoSportsDB are highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailoversecondarydatabase.png "Steps to choose the ContosoSportsDB are highlighted")
+  ![](media/mca53.png)
 
-9. Select **Create** to create the SQL Failover Group.
+8. Notice, on the **Failover group** pane, the map and display showing the _Primary_ and _Secondary_ SQL Database servers within the failover group. The _Primary_ database shows as **Automatic** failover for Read/Write of data, while the _Secondary_ database doesn't since it is currently Read only.
 
-10. Once the Failover Group has been created, select it in the list.
+  ![](media/mca28.png)
 
-    ![Failover Group is highlighted](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailovergrouplist.png "Failover Group is highlighted")
-
-11. Notice, on the **Failover group** pane, the map and display showing the _Primary_ and _Secondary_ SQL Database servers within the failover group. The _Primary_ database shows as **Automatic** failover for Read/Write of data, while the _Secondary_ database doesn't since it is currently Read only.
-
-    ![Map display of Primary and Seconary databases.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailovergroupmap.png "Map display of Primary and Seconary databases")
-
-12. Scroll down, below the map, to where the **Read/write listener endpoint** and **Read-only listener endpoint** are displayed. These allow for applications to be configured to connect to the SQL Failover Group endpoints instead of the individual SQL Server endpoints.
+9. Scroll down, below the map, to where the **Read/write listener endpoint** and **Read-only listener endpoint** are displayed. These allow for applications to be configured to connect to the SQL Failover Group endpoints instead of the individual SQL Server endpoints.
 
     Copy both **Listener Endpoint** values for later reference.
 
-    ![Read/Write and Read-only listener endpoints are displayed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/sqlfailovergroupendpoints.png "Read/Write and Read-only listener endpoints are displayed")
+  ![](media/mca29.png)
 
-13. Go back to the **contososports** resource group blade.
+10. Go back to the **contososports** resource group blade.
 
-14. Select the **contosoapp** web app (**App Service** type).
+11. Select the **contosoapp** web app (**App Service** type).
 
-    ![contosoapp is highlighted](media/2019-04-19-13-46-40.png "contosoapp is highlighted")
+  ![](media/mca13.png)
 
-15. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, select **Configuration**.
+12. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, select **Configuration**.
 
     ![Configuration option is highlighted.](media/2019-04-19-16-38-54.png "Configuration option is highlighted")
 
-16. Locate the **Connection Strings** section, and modify the value of the **ContosoSportsLeague** connection string to include the **Azure SQL Failover Group Read/Write Listener Endpoint** that was copied previously.
+13. Locate the **Connection Strings** section, and modify the value of the **ContosoSportsLeague** connection string to include the **Azure SQL Failover Group Read/Write Listener Endpoint** that was copied previously.
 
     > Note: The connection string will need to be in the following format:
     > ```
@@ -485,7 +466,7 @@ With SQL Database Geo-Replication configured, the Azure SQL Failover Groups feat
     >
     > Be sure to replace the string placeholder values **{your_username}**, **{your_password_here}**, and **{failover_group_endpoint}** with the username, password, and read/write listener endpoint for the SQL Database Failover Group. The username and password will remain the same as they were for the SQL Server.
 
-17. Select **Save**.
+14. Select **Save**.
 
 #### Subtask 3: Failover SQL Database Failover Group
 
@@ -501,19 +482,15 @@ Since the Replication and Failover process can take anywhere from 10 to 30 minut
 
 3. On the **Overview** pane, select the **Server name**.
 
-    ![Server name is highlighted.](images/2020-03-17-19-35-23.png "Server name is highlighted")
+  ![](media/mca22.png)
 
-4. On the **SQL server** blade, select **Failover groups** under Settings.
+4. On the **SQL server** blade, select **Failover groups** under Settings then click on the **Failover group** in the list
 
-    ![Failover groups option is highlighted.](images/2020-03-17-19-37-00.png "Failover groups option is highlighted")
+  ![](media/mca54.png)
 
-5. Select the **Failover group** in the list.
+5. On the Failover group blade, select the **Forced Failover** button, then select **Yes** to confirm the forced failover of the SQL Database Failover Group.
 
-    ![Failover group is highlighted in the list.](images/2020-03-17-19-38-01.png "Failover group is highlighted in the list")
-
-6. On the Failover group blade, select the **Forced Failover** button, then select **Yes** to confirm the forced failover of the SQL Database Failover Group.
-
-    ![Forced failover confirmation is displayed.](images/2020-03-17-19-39-56.png "Forced failover confirmation is displayed")
+  ![](media/mca55.png)
 
 The failover may take a few minutes to complete. You can continue with the next Subtask.
 
