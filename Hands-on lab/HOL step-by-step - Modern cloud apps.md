@@ -276,7 +276,7 @@ On the **Access keys** blade, select the copy button by the **Connection String*
 
     >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously.
 
-  ![](media/mca17.png)
+  ![](media/mca56.png)
 
 8. Select **Save**.
 
