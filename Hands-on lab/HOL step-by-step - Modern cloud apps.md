@@ -817,7 +817,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
    - App Setting Name: `paymentAPIUrl`
 
-   - Value: Enter the **HTTPS** URL for the Payments API App with `/api/nvp` appended to the end.
+   - Value: Enter the **HTTPS** URL for the Payment API App with `/api/nvp` appended to the end.
 
         >**Example**: `https://paymentapiapp-202971.azurewebsites.net/api/nvp`
 
