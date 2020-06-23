@@ -623,13 +623,13 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 3. On the new **API App** blade, create the following values:
 
-   - **App name:** **paymentapp-{uniqueid}**.
+   - **App name:** **paymentapiapp-{uniqueid}**.
    - **Subscription:** Your default subscription.
    - **Resource Group:** Select **Use existing** option and then select **contososports-01**
    - **App Service Plan/Location** Select the same primary region(West US) used in previous steps.
    - **Application Insights:** **Disabled**
 
-  ![](media/ma36.png)
+  ![](media/mca65.png)
 
 4. After the values are accepted, select **Create**.  It will take a few minutes to provision.
 
