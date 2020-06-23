@@ -1,4 +1,4 @@
-![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+  ![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Modern cloud apps
@@ -161,7 +161,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 1. Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance and login with your lab-provided Azure credentials.
 
-2. Navigate to the **contososports** resource group.
+2. Navigate to the **contososports-01** resource group.
 
 3. Select the **ContosoSportsDB** SQL Database.
 
@@ -175,7 +175,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
   ![](media/mca3.png)
 
-6. Go back to the **contososports** resource group blade, and select the **contososports** SQL Server.
+6. Go back to the **contososports-01** resource group blade, and select the **contososports-uniqueid** SQL Server.
 
   ![](media/mca4.png)
 
@@ -201,7 +201,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 #### Subtask 2: Retrieve Storage Account Access Keys
 
-1. Go back to the **contososports** blade resource group, and select the **contoso** Storage account.
+1. Go back to the **contososports-01** blade resource group, and select the **contoso{uniqueid}** Storage account.
 
 2. On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option.
 
@@ -211,7 +211,7 @@ On the **Access keys** blade, select the copy button by the **Connection String*
 
 #### Subtask 3: Retrieve Service Bus Queue Connection String
 
-1. Go back to the **contososports** blade resource group, and select the **contoso** Service Bus Namespace.
+1. Go back to the **contososports-01** blade resource group, and select the **contoso{uniqueid}** Service Bus Namespace.
 
   ![](media/mca9.png)
 
@@ -237,9 +237,9 @@ On the **Access keys** blade, select the copy button by the **Connection String*
 
 #### Subtask 4: Update the configuration in the starter project
 
-1. Go back to the **contososports** resource group blade.
+1. Go back to the **contososports-01** resource group blade.
 
-2. Select the **contosoapp** web app (**App Service** type).
+2. Select the **contosoapp-uniqueid** web app (**App Service** type).
 
   ![](media/mca13.png)
 
@@ -447,7 +447,7 @@ With SQL Database Geo-Replication configured, the Azure SQL Failover Groups feat
 
   ![](media/mca29.png)
 
-10. Go back to the **contososports** resource group blade.
+10. Go back to the **contososports-01** resource group blade.
 
 11. Select the **contosoapp** web app (**App Service** type).
 
@@ -496,7 +496,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 #### Subtask 4: Test e-commerce Web App after Failover
 
-1. From the Azure portal, select **Resource Groups**, and select **contososports**.
+1. From the Azure portal, select **Resource Groups**, and select **contososports-01**.
 
 2. Select the **Web App** created earlier.
 
@@ -535,7 +535,7 @@ In this exercise, you will provision a website via the Azure Web App template us
    - Publish- **Code**
    - Runtime Stack- **.NET Core 3.1 (LTS)**
    - Operating System- **Linux**
-   - Region- Same as your resource group
+   - Region- Same as your **contososports-01**resource group
    - App Service Plan- Create new and name it **appservice-{uniqueid}**
    - Sku and size- **Premium V2 P1v2**
 
@@ -690,7 +690,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 3. On the new **API App** blade, create the following values:
 
-   - **App name:** **offerapiapp-{uniqueid}**.
+   - **App name:** **offersapiapp-{uniqueid}**.
    - **Subscription:** Your default subscription.
    - **Resource Group:** Select **Use existing** option and then select **contososports-01**
    - **App Service Plan/Location** Select the same primary region(West US) used in previous steps.
@@ -799,7 +799,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 1. Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>.
 
-2. Select **Resource groups** then the **contososports** resource group.
+2. Select **Resource groups** then the **contososports-01** resource group.
 
   ![](media/mca72.png)
 
@@ -1042,11 +1042,11 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     >**Note**: Essentially, you will need to switch back to your previous Azure AD tenant, and then launch the Azure AD B2C creation wizard again.
 
-4. Select **Link an existing Azure AD B2C Tenant to my Azure subscription,** and select the Tenant you just created in the dropdown list and the existing resource group **contososports**. Then, select **Create**.
+4. Select **Link an existing Azure AD B2C Tenant to my Azure subscription,** and select the Tenant you just created in the dropdown list and the existing resource group **contososports-01**. Then, select **Create**.
 
     ![In the Create new B2C Tenant or Link to existing Tenant blade, on the left, Link an existing Azure AD B2C Tenant to my Azure subscription is selected. On the right, in the Azure AD B2C Resource blade, the Azure AD B2C Tenant drop-down field is contosodb2ccustsitecp.onmicrosoft.com. The Resource group is using the existing contososports.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image159.png "Create new B2C Tenant or Link to existing Tenant")
 
-5. After creation completes, open the new Azure AD B2C tenant by selecting **Resource Groups** in the navigation menu to the left and, then, **contososports**. Then, in the new blade, select the B2C tenant you just created.
+5. After creation completes, open the new Azure AD B2C tenant by selecting **Resource Groups** > **contososports-01** in the navigation menu to the left. Then, in the new blade, select the B2C tenant you just created.
 
     ![In the contososports resource group, the new B2C tenant is boxed in red.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/b2ctenant_in_rg.png "Azure AD B2C Settings window")
 
@@ -1551,7 +1551,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 #### Subtask 2: Enable client side telemetry
 
-1. Open the Azure Management Portal (<http://portal.azure.com>), and navigate to the **contososports** Resource Group.
+1. Open the Azure Management Portal (<http://portal.azure.com>), and navigate to the **contososports-01** Resource Group.
 
 2. Select the **Application Insights** instance with the name that starts with **contososportsai** that is associated with the Contoso E-Commerce Site.
 
@@ -1620,7 +1620,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 #### Subtask 1: Create the load test
 
-1. Open the Azure Management Portal (<http://portal.azure.com>), and navigate to the **contososports** Resource Group.
+1. Open the Azure Management Portal (<http://portal.azure.com>), and navigate to the **contososports-01** Resource Group.
 
 2. Select the **Application Insights** instance with the name that starts with **contososportsai** that is associated with the Contoso E-Commerce Site.
 
@@ -1726,13 +1726,13 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
   ![](media/mca57.png)
 
-2. Then select **Compute > Function App**. Select **Create** button at the bottom.
+2. Then in the search box type Logic and select **Logic App**.
 
   ![](media/mca97.png)
 
-3. Provision and deploy the new function app, with the following settings:
+3. Click on Create to provision and deploy the new function app, then add following settings:
 
-    - Resource Group: Use the existing resource group, **contososports**.
+    - Resource Group: Use the existing resource group, **contososports-01**.
 
     - Function App name: **contosofunctionapp-192372**.
 
@@ -1765,7 +1765,7 @@ Once done select **Review+create**.
 
   ![](media/mca101.png)
 
-7. Navigate to the Storage Account in the **contososports** resource group, select **contoso{uniqueid}** storage account.
+7. Navigate to the Storage Account in the **contososports-01** resource group, select **contoso{uniqueid}** storage account.
 
   ![](media/mca102.png)
 
@@ -1833,7 +1833,7 @@ Once done select **Review+create**.
 
 20. Check your receipt PDF in the storage account blob.
 
-    - Navigate to the ContosoSports storage account.
+    - Navigate to the **contoso{uniqueid}** storage account.
     - Select the **Blobs** link.
 
   ![](media/mca113.png)
@@ -1874,13 +1874,13 @@ The advantages of using Logic Apps include the following:
 
   ![](media/mca57.png)
 
-3. Then in the search box type API and select **Logic App**.
+3. Then in the search box type Logic and select **Logic App**.
 
   ![](media/mca116.png)
 
 4. Click on **Create** to provision and deploy the new function app, then add following settings:
 
-    - Resource Group: Use the existing resource group, **contososports**.
+    - Resource Group: Use the existing resource group, **contososports-01**.
 
     - Logic App name: **contosologicapp-192372**.
 
@@ -2143,7 +2143,7 @@ The advantages of using Logic Apps include the following:
 
 9. Click on **Create** to provision and deploy the new function app, then add following settings:
 
-    - Resource Group: Use the existing resource group, **contososports**.
+    - Resource Group: Use the existing resource group, **contososports-01**.
 
     - Logic App name: **contosologicapplication-192372**.
 
@@ -2284,6 +2284,7 @@ The advantages of using Logic Apps include the following:
 
     ![The Workflow diagram begins with Recurrence, then flows to Execute stored procedure, then to Condition. The Condition fields are as follows: Object Name, ReturnCode; Relationship, is greater than; Value, 0. Below the Workflow diagram is an If Yes box, with a workflow that begins wtih Execute stored procedure 2, and flows to forEach email. There is also an If No, Do Nothing box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image305.png "Workflow diagram")
 
+# 
 
 # Lab Completed
 
