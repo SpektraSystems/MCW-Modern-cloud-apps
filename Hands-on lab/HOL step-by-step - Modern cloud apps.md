@@ -589,11 +589,11 @@ Then select **Revies+create**.
 
   ![](media/mca31.png)
 
-Choose **Azure App Service(Linux)** as the publish target, then click on **Next**.
+5. Choose **Azure App Service(Linux)** as the publish target, then click on **Next**.
 
   ![](media/mca32.png)
 
-5. Select the **Web App** for the Call Center Admin App y clicking on resource group dropdown. Then select **Finish**.
+6. Select the **Web App** for the Call Center Admin App by clicking on resource group dropdown. Then select **Finish**.
 
   ![](media/mca33.png)
 
@@ -641,23 +641,34 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, select **Azure App Service**, then choose **Select Existing**, and **Create Profile**.
+3. Click on **Start**.
 
-    > **Note**: If your Azure resource group does not show, choose **New Profile**.
+  ![](media/mca48.png)
 
-4. Select the Payment Gateway API app created earlier, select **OK**.
+4. Choose **Azure - Publish your application to the Microsoft cloud.**
 
-    ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
+  ![](media/mca31.png)
 
-5. Select **Publish**.
+5. Choose **Azure App Service(Windows)** as the publish target, then click on **Next**.
 
-6. In the Visual Studio **Output** view, you will see a status indicating the Web App was published successfully.
+  ![](media/mca37.png)
 
-    ![The Visual Studio output shows that the web app was published successfully.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image99.png "Visual Studio output")
+6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
+**Tejasiwni can you take ss on this point**
 
-7. Copy and paste the gateway **URL** of the deployed **API App** into Notepad for later use.
+  ![](media/mca38.png)
 
-8. Viewing the Web App in a browser will display the Swagger UI for the API.
+7. Select **Publish**.
+
+  ![](media/mca62.png)
+
+8. Once succeeded it will show output as Web app was published successfully.
+  
+  ![](media/mca39.png)
+
+9. Copy and paste the gateway **URL** of the deployed **API App** into Notepad for later use.
+
+10. To view the Web App paste the gateway URL in a browser and this will display the Swagger UI for the API.
 
    ![Payment Gateway is up and running and the Swagger UI is displayed.](media/2019-04-11-04-58-04.png "Swagger UI")
 
