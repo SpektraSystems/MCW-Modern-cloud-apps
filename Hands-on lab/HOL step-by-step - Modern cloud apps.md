@@ -412,7 +412,7 @@ With SQL Database Geo-Replication configured, the Azure SQL Failover Groups feat
 
 3. On the **SQL database** blade, within the **Overview** pane, select the **Server name**.
 
-  ![](media/mca22.png)
+  ![](media/mca59.png)
 
 4. On the **SQL server** blade, select **Failover groups** under **Settings** and then click on the **Add group** button.
 
@@ -506,7 +506,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 4. On the **Overview** pane, select the **URL** for the Web App to open it in a new browser tab.
 
-    ![On the App Service blade, in the Essentials section, the URL (http;//contososportsweb4azurewebsites.net) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image72.png "App Service blade Essentials section")
+  ![](media/mca14.png)
 
 5. After the e-commerce Web App loads in Internet Explorer, select **STORE** in the top navigation bar of the website.
 
@@ -522,9 +522,13 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 #### Subtask 1: Provision the call center admin Web App
 
-1. Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
+1. Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>. Now Select **+Create a resource**.
+
+  ![](media/mca57.png)
 
 2. Select **+Create a resource** then select **Web**, then **Web App**.
+
+  ![](media/mca58.png)
 
 3. Specify a **unique URL** for the Web App, **resource group** you have used throughout the lab are selected. Also, specify **.NET Core 3.1 (LTS)** as the **Runtime stack**.
 
