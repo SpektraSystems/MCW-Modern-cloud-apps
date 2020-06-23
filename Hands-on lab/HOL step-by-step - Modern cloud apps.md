@@ -779,7 +779,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 7. Select **Publish**.
 
-  ![](media/mca67.png)
+ ![](media/mca67.png)
 
 8. In the Visual Studio **Output** view, you will see a status the API app was published successfully.
 
