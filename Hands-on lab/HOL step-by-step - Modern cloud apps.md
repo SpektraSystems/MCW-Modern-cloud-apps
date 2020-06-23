@@ -660,7 +660,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 7. Select **Publish**.
 
-  ![](media/mca62.png)
+  ![](media/mca66.png)
 
 8. Once succeeded it will show output as Web app was published successfully.
   
@@ -678,31 +678,45 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 #### Subtask 1: Provision the Offers Web API app
 
-1. Using a new tab or instance of your browser, navigate to the Azure Management Portal (<http://portal.azure.com>).
+1. 1. Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>. Select **+Create a resource**.
 
-2. Select **+Create a resource**, type **API App** into the marketplace search box, and press **Enter**.  Select the **Create** button.
+  ![](media/mca57.png)
 
-3. On the new **API App** blade, specify a unique name for the **API App**, and ensure the previously used Resource Group and App Service Plan are selected.
+2. Type **API App** into the marketplace search box, and press **Enter**.  Then select the **Create** button.
 
-    ![In the API App blade, offersapith is typed in the App name field. App configuration fields displayed.](media/2019-04-11-05-03-33.png "API App blade")
+  ![](media/mca64.png)
+  
+  ![](media/mca63.png)
+
+3. On the new **API App** blade, create the following values:
+
+   - **App name:** **offerapiapp-{uniqueid}**.
+   - **Subscription:** Your default subscription.
+   - **Resource Group:** Select **Use existing** option and then select **contososports-01**
+   - **App Service Plan/Location** Select the same primary region(West US) used in previous steps.
+   - **Application Insights:** **Disabled**
+
+  ![](media/mca401.png)
 
 4. After the values are accepted, select the **Create** button.
 
-5. When the Web App template has completed provisioning, open the new API App by, in the navigation menu to the left, select **App Services** and then the Offer API app you just created.
+5. When the Web App template has completed provisioning, open the new API App by, in the navigating Azure portal and then selecting **App Service** present under Azure Services.
 
-   ![In the Azure Portal, on the left More services is selected, and on the right under Web + Mobile, App Services displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image101.png "Azure Portal, More Services")
+  ![](media/mca69.png)
+
+6. Then click on **Offer API app** you just created.
+
+  ![](media/mca68.png)
 
 #### Subtask 2: Configure Cross-Origin Resource Sharing (CORS)
 
-1. On the **App Service** blade for the Offers API, under the **API** menu section, scroll down and select **CORS**.
+1. On the **App Service** blade for the Offers API, under the **API** menu section select **CORS**. Now in the **Allowed Origins** text box, specify `*` to allow all origins, and select **Save**.
 
-    ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
+  ![](media/mca70.png)
 
-2. In the **Allowed Origins** text box, specify `*` to allow all origins, and select **Save**.
+2. Once saved it will give notification saying **Update API CORS**.
 
-    >**Note**: You should not normally do this in a production environment. In production, you should enter the specific domains as allowed origins you need to allow CORS access to the API. The wildcard (*) is used for this lab to make it easier just for this lab.
-
-    ![CORS configuration blade displayed.  Entering * as the Allowed Origins value.](media/2019-03-28-08-20-57.png "CORS configuration blade")
+  ![](media/mca71.png)
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -718,7 +732,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
       - Type: `SQL Azure`
 
-        ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
+  ![](media/mca61.png)
 
         >**Note**: The Connection String for the SQL Database Failover Group Read-only Listener Endpoint will be in the following format:
         >
@@ -732,7 +746,7 @@ In this exercise, the attendee will provision an Azure API app template using th
         >
         > The SQL Failover Group Read-only Listener Endpoint will be the DNS name that ends in `.secondary.database.windows.net`. You will have copied this previously when setting up the SQL Failover Group.
 
-3. Select the **Update** button.
+3. Select the **Ok** button.
 
 4. Select the **Save** button.
 
@@ -746,27 +760,38 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](media/2019-04-19-15-03-45.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, select **Azure App Service**, choose **Select Existing**, and select **Create Profile**.
+3. Click on **Start**.
 
-    ![On the Publish tab, the Microsoft Azure App Service tile is selected, and under it, the radio button for Select Existing is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image109.png "Publish tab")
+  ![](media/mca48.png)
 
-4. Select the Offers API app created earlier, and select **OK**.
+4. Choose **Azure - Publish your application to the Microsoft cloud.**
 
-    ![In the App Service section, the contososports folder is expanded, and OffersAPI4 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image110.png "App Service section")
+  ![](media/mca31.png)
 
-5. Select **Publish**.
+5. Choose **Azure App Service(Windows)** as the publish target, then click on **Next**.
 
-6. In the Visual Studio **Output** view, you will see a status the API app was published successfully.
+  ![](media/mca37.png)
 
-7. Record the value of the deployed API app URL into Notepad for later use.
+6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
+**Tejasiwni can you take ss on this point**
 
-8. Viewing the Web App in a browser will display the Swagger UI for the API.
+  ![](media/mca41.png)
+
+7. Select **Publish**.
+
+  ![](media/mca67.png)
+
+8. In the Visual Studio **Output** view, you will see a status the API app was published successfully.
+
+9. Record the value of the deployed API app URL into Notepad for later use.
+
+10. To view the Web App paste the gateway URL in a browser and this will display the Swagger UI for the API.
 
     ![Payment Gateway is up and running and the Swagger UI is displayed.](media/2019-04-11-05-20-40.png "Swagger UI")
 
-9. Within the Swagger UI for the Offers API, select the `/api/get` method on the API. Then select the **Try it out** button, and then **Execute** to test out the API call from within the Swagger UI in the web browser. Once it executes, scroll down to view the results of the API call execution.
+11. Within the Swagger UI for the Offers API, select the `/api/get` method on the API. Then select the **Try it out** button, and then **Execute** to test out the API call from within the Swagger UI in the web browser. Once it executes, scroll down to view the results of the API call execution.
 
-    ![Swagger UI displaying API call response.](media/2020-03-17-20-56-31.png "Swagger UI")
+  ![](media/mca42.png)
 
 ### Task 6: Update and deploy the e-commerce website
 
