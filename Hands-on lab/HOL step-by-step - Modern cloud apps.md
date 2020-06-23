@@ -801,9 +801,11 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 2. Select **Resource groups** then the **contososports** resource group.
 
+  ![](media/mca72.png)
+
 3. Select the **App Service Web App** for the front-end web application.
 
-    ![In the Resource Group blade on the right, under Name, contosoapp is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image113.png "Resource Group blade")
+  ![](media/mca13.png)
 
 4. On the **App Service** blade, scroll down, and select **Configuration** in the left pane.
 
@@ -813,13 +815,13 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Add a new **Application Setting** with the following values:
 
-   - App Setting Name: `paymentsAPIUrl`
+   - App Setting Name: `paymentAPIUrl`
 
    - Value: Enter the **HTTPS** URL for the Payments API App with `/api/nvp` appended to the end.
 
-        >**Example**: `https://paymentsapi0.azurewebsites.net/api/nvp`
+        >**Example**: `https://paymentapiapp-202971.azurewebsites.net/api/nvp`
 
-    ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
+  ![](media/mca73.png)
 
 7. Add another **Application Setting** with the following values:
 
@@ -827,9 +829,9 @@ In this exercise, the attendee will provision an Azure API app template using th
 
    - Value: Enter the **HTTPS** URL for the Offers API App with `/api/get` appended to the end.
 
-    >**Example**: `https://offersapi4.azurewebsites.net/api/get`
+    >**Example**: `https://offersapiapp-202971.azurewebsites.net/api/get`
 
-    ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
+  ![](media/mca74.png)
 
     >**Note**: Ensure both API URLs are using **SSL** (https://), or you will see a CORS errors.
 
@@ -837,23 +839,17 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 #### Subtask 2: Validate App Settings are correct
 
-1. On the **App Service** blade, select **Overview**.
+1. On the **App Service** blade, select **Overview**. In the **Overview** pane, select the **URL** for the Web App to open it in a new browser tab.
 
-    ![Overview is selected on the left side of the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image119.png "App Service blade")
+  ![](media/mca76.png)
 
-2. In the **Overview** pane, select the **URL** for the Web App to open it in a new browser tab.
-
-    ![On the right side of the App Service blade, under Essentials, the URL (http://contososportsweb2101.azurewebsites.net) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image120.png "App Service blade")
-
-3. On the homepage, you should see the latest offers populated from the Offers API.
+2. On the homepage, you should see the latest offers populated from the Offers API.
 
     ![On the Contoso Sports League webpage, Today\'s offers display: Baseball socks, Road bike, and baseball mitt.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image121.png "Contoso Sports League webpage")
 
-4. Submit several test orders to ensure all pieces of the site are functional.  **Accept the default data during the payment processing.**
+3. Submit several test orders to ensure all pieces of the site are functional.  **Accept the default data during the payment processing.**
 
     ![On the Contoso Sports League webpage, the message Order Completed displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image122.png "Contoso Sports League webpage")
-
->**Leader Note**: If the attendee is still experiencing CORS errors, ensure the URLs to the Web App in Azure local host are exact.
 
 ## Exercise 2: Identity and Security
 
