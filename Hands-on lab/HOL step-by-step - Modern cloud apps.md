@@ -581,21 +581,23 @@ Then select **Revies+create**.
 
     ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](media/2019-04-19-14-30-03.png "Right-Click menu")
 
-3. Choose **App Service Linux** as the publish target, choose **Select Existing**, then select **Create Profile**.
+3. Click on **Start**.
 
-    ![On the Publish tab, App Service Linux is selected. Below that, the radio button is selected for Select Existing.](media/2020-03-17-20-09-01.png "Publish tab")
+  ![](media/mca48.png)
 
-4. Select the **Web App** for the Call Center Admin App.
+4. Choose **Azure App Service(Linux)** as the publish target, then click on **Next**.
 
-    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and the Call Center Web App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
+  ![](media/mca32.png)
 
-5. Select **OK**.
+5. Select the **Web App** for the Call Center Admin App y clicking on resource group dropdown. Then select **Finish**.
 
-6. Select **Publish**.
+  ![](media/mca33.png)
 
-    ![Display the Visual Studio Contoso.Apps.SportsLeague.Admin publish success message in the output.](media/2019-03-28-05-45-28.png "Publish Succeeded")
+7. Select **Publish**.
 
-6. Once deployment is complete, navigate to the Web App. It should look like the following:
+  ![](media/mca62.png)
+
+8. Once deployment is complete, navigate to the Web App. It should look like the following:
 
     ![The Contoso website displays the Contoso Sports League Admin webpage, which says that orders that display below are sorted by date, and you can select an order to see its details. However, at this time, there is no data available under Completed Orders.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image89.png "Contoso website")
 
@@ -605,21 +607,25 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 #### Subtask 1: Provision the payment gateway API app
 
-1. Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>.
+1. Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>. Select **+Create a resource**.
 
-2. Select **+Create a resource**, type **API App** into the marketplace search box, and press **Enter**.  Select the **Create** button.
+  ![](media/mca57.png)
 
-    ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png "Azure Portal - Create API App")
+2. Type **API App** into the marketplace search box, and press **Enter**.  Then select the **Create** button.
+
+  ![](media/mca64.png)
+  
+  ![](media/mca63.png)
 
 3. On the new **API App** blade, create the following values:
 
-   - **App name:** Specify a unique name for the App Name.
-   - **Subscription:** Your Azure MSDN subscription.
-   - **Resource Group:** Select **Use existing** option.
-   - **App Service Plan/Location** Select the same primary region used in previous steps.
+   - **App name:** **paymentapp-{uniqueid}**.
+   - **Subscription:** Your default subscription.
+   - **Resource Group:** Select **Use existing** option and then select **contososports-01**
+   - **App Service Plan/Location** Select the same primary region(West US) used in previous steps.
    - **Application Insights:** **Disabled**
 
-    ![On the API App blade. Configuration fields are displayed.](media/2019-04-20-14-55-42.png "Configuration fields are displayed")
+  ![](media/ma36.png)
 
 4. After the values are accepted, select **Create**.  It will take a few minutes to provision.
 
