@@ -585,7 +585,11 @@ Then select **Revies+create**.
 
   ![](media/mca48.png)
 
-4. Choose **Azure App Service(Linux)** as the publish target, then click on **Next**.
+4. Choose **Azure - Publish your application to the Microsoft cloud.**
+
+  ![](media/mca31.png)
+
+Choose **Azure App Service(Linux)** as the publish target, then click on **Next**.
 
   ![](media/mca32.png)
 
