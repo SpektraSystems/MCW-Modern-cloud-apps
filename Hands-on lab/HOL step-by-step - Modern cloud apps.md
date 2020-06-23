@@ -526,23 +526,30 @@ In this exercise, you will provision a website via the Azure Web App template us
 
   ![](media/mca57.png)
 
-2. Select **+Create a resource** then select **Web**, then **Web App**.
+2. Now select **Web** and click on **Web App**.
 
   ![](media/mca58.png)
 
-3. Specify a **unique URL** for the Web App, **resource group** you have used throughout the lab are selected. Also, specify **.NET Core 3.1 (LTS)** as the **Runtime stack**.
+3. Specify the following values:
+   - Name- **contosocallcenterapp-{uniqueid}**
+   - Publish- **Code**
+   - Runtime Stack- **.NET Core 3.1 (LTS)**
+   - Operating System- **Linux**
+   - Region- Same as your resource group
+   - App Service Plan- Create new and name it **appservice-{uniqueid}**
+   - Sku and size- **Premium V2 P1v2**
 
-    ![On the Web App blade, the App name field is set to contososportscallcentercp.](media/2019-03-28-05-29-59.png "Web App blade")
+Then select **Revies+create**.
 
-4. Select **Linux Plan**, and create a new Linux-based App Service Plan for the Web App.
+  ![](media/mca30.png)
 
-5. After the values are accepted, select **Review and create**, then **Create**.  It will take a few minutes to provision.
+4. Select **Create**. It will take a few minutes to provision.
 
 #### Subtask 2: Update the configuration in the starter project
 
 1. Navigate to the **App Service** blade for the Call Center Admin App just provisioned.
 
-    ![The App Service blade displays.](media/2020-03-17-19-59-03.png "App Service blade")
+  ![](media/mca60.png)
 
 2. On the **App Service** blade, select **Configuration** in the left pane.
 
@@ -558,13 +565,13 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     - Type: `SQL Azure`
 
-    ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
+  ![](media/mca61.png)
 
-5. Select the **Update** button.
+5. Select the **Ok** button.
 
 6. Select the **Save** button.
 
-    ![the Save button is circled on the App Service blade.](media/2019-03-28-05-36-38.png "App Service blade")
+  ![](media/mca18.png)
 
 #### Subtask 3: Deploy the call center admin Web App from Visual Studio
 
