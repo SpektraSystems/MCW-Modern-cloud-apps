@@ -284,37 +284,39 @@ On the **Access keys** blade, select the copy button by the **Connection String*
 
 #### Subtask 5: Deploy the e-commerce Web App from Visual Studio
 
-1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
+1. Go to File explorer, navigate to **C:\MCW\Contoso Sports League** and open **Contoso.Apps.SportsLeague.sln** project using **Visual Studio 2019**.
+
+2. Now navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
 
     ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](media/2019-04-19-14-03-04.png "Solution Explorer")
 
-2. Click on **Start** button.
+3. Click on **Start** button.
 
   ![](media/mca48.png)
 
-3. Choose **Azure - Publish your application to the Microsoft cloud**.
+4. Choose **Azure - Publish your application to the Microsoft cloud**.
 
   ![](media/mca31.png)
 
-4. Now choose **Azure App Service (Windows)**.
+5. Now choose **Azure App Service (Windows)**.
 
   ![](media/mca49.png)
 
-5. Select the **Contoso Sports Web App** (with the name you created previously) and click on **Finish**.
+6. Select the **Contoso Sports Web App** (with the name you created previously) and click on **Finish**.
 
   ![](media/mca50.png)
 
-6. Select **Publish** to publish the Web application.
+7. Select **Publish** to publish the Web application.
 
   ![](media/mca51.png)
 
-7. In the Visual Studio **Web Publish Activity** view, you will see a status that indicates the Web App was published successfully.
+8. In the Visual Studio **Web Publish Activity** view, you will see a status that indicates the Web App was published successfully.
 
   ![](media/mca52.png)
 
     >**Note**: Your URL will differ from the one shown in the Output screenshot because it must be globally unique.
 
-8. A new browser should automatically open the new web applications. Validate the website by choosing the **Store** link on the menu. You should see product items. If products are returned, then the connection to the database is successful.
+9. A new browser should automatically open the new web applications. Validate the website by choosing the **Store** link on the menu. You should see product items. If products are returned, then the connection to the database is successful.
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
