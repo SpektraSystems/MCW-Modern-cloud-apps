@@ -1291,7 +1291,7 @@ To enable profile editing on your application, you will need to create a profile
 
 Your app is now properly configured to communicate with Azure AD B2C by using ASP.NET Core Identity. OWIN has taken care of all of the details of crafting authentication messages, validating tokens from Azure AD, and maintaining user session. All that remains is to initiate each user's flow.
 
-1. Right select the **Controllers** folder, and select **Add** -\> **Controller**.
+1. Now locate **Contoso.Apps.SportsLeague.Web**, then right click on it and select the **Controllers** folder, and select **Add** -\> **Controller**.
 
     ![In Solution Explorer, in the right-click menu for the Controllers folder, Add is selected, and from its menu, Controller is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image177.png "Solution Explorer")
 
