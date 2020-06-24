@@ -656,7 +656,6 @@ In this exercise, the attendee will provision an Azure API app template using th
   ![](media/mca37.png)
 
 6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
-**Tejasiwni can you take ss on this point**
 
   ![](media/mca38.png)
 
@@ -775,7 +774,6 @@ In this exercise, the attendee will provision an Azure API app template using th
   ![](media/mca37.png)
 
 6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
-**Tejasiwni can you take ss on this point**
 
   ![](media/mca41.png)
 
