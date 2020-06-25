@@ -201,31 +201,27 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 #### Subtask 2: Retrieve Storage Account Access Keys
 
-1. Go back to the **contososports-01** blade resource group, and select the **contoso{uniqueid}** Storage account.
+1. Go back to the **contososports-01** blade resource group, and select the **contosostorage{uniqueid}** Storage account.
 
-2. On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option.
+  ![](media/mca127.png)
 
-On the **Access keys** blade, select the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
+2. On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option. On the **Access keys** blade, select the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
 
-  ![](media/mca8.png)
+  ![](media/mca126.png)
 
 #### Subtask 3: Retrieve Service Bus Queue Connection String
 
-1. Go back to the **contososports-01** blade resource group, and select the **contoso{uniqueid}** Service Bus Namespace.
+1. Go back to the **contososports-01** blade resource group, and select the **contososervicebus{uniqueid}** Service Bus Namespace.
 
-  ![](media/mca9.png)
+  ![](media/mca125.png)
 
-2. Select the **Queues** link under Entities.
+2. Select the **Queues** link under **Entities**, then select the **receiptgenerator** Service Bus Queue.
 
-    ![Queues link under Entities](media/2020-03-18-10-38-57.png "Queues link")
-
-3. On the **Queues** pane, select the **receiptgenerator** Service Bus Queue.
-
-  ![](media/mca10.png)
+  ![](media/mca129.png)
 
 4. On the **receiptgenerator** Service Bus Queue blade, select the **Shared access policies** link under Settings. Then open the **Publisher** shared access policy.
 
-  ![](media/mca11.png)
+  ![](media/mca130.png)
 
 >**Note**: The _Publisher_ and _Listener_ shared access policies for the Azure Service Bus Queue were deployed as part of the ARM Template that was used to setup the lab environment. As you can see, the **Publisher** policy that we're copying the connection string for, only has permissions to _Send_ messages to the queue.
     >
@@ -657,7 +653,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
 
-  ![](media/mca38.png)
+  ![](media/mca131.png)
 
 7. Select **Publish**.
 
@@ -775,7 +771,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Select the **Web App** for the Payment App by clicking on resource group dropdown. Then select **Finish**. 
 
-  ![](media/mca41.png)
+  ![](media/mca132.png)
 
 7. Select **Publish**.
 
@@ -1028,15 +1024,24 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![In the Everything blade, the active directory B2C text is in the Search field, and under Results, Azure Active Directory B2C displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image156.png "Everything blade")
 
-2. In the new blade, select **Create a new Azure AD B2C Tenant**. Then, enter the name as **ContosoB2C** and a unique domain name and region. Then, select **Create**. After directory creation completes, select the link in the new information tile that reads **Click here to manage your new directory**.
+2. In the new blade, select **Create a new Azure AD B2C Tenant**. 
 
-    ![In the Azure Portal, under Create new B2C Tenant or Link to existing Tenant, Create a new Azure AD B2C Tenant is selected. On the right, the word \"here,\" which is a link, is circled in the Select here to manage your new directory message.](media/2019-03-28-09-29-30.png "Azure Portal")
+  ![](media/mca133.png)
 
-    ![In the Azure Portal, under Create new B2C Tenant or Link to existing Tenant, Create a new Azure AD B2C Tenant is selected. On the right, the word \"here,\" which is a link, is circled in the Select here to manage your new directory message.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image157.png "Azure Portal")
+3. Enter the following names and then, select **Review+create**. 
+   - Organization name: **ContosoB2C-uniqueid**
+   - Initial domain: **contosoADB2C{uniqueid}**
+   - Country/Region: **United States**
 
-3. Select the orange **No Subscription** message for instructions on how to link to an active subscription.
+  ![](media/mca134.png)
 
-    ![In the Azure Portal, on the left, the \"No subscription linked to this B2C tenant or the Subscription needs your attention\" message is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image158.png "Azure Portal")
+4. Select **Create**. After directory creation completes, select the link in the new information tile that reads **Click here to manage your new directory**.
+
+  ![](media/mca135.png)
+
+5. Select the orange **No Subscription** message for instructions on how to link to an active subscription.
+
+  ![](media/mca136.png)
 
     ![The three steps to link the B2C tenant to an Azure subscription are circled.](media/2019-08-25-17-45-26.png "Azure Portal")
 
@@ -1044,7 +1049,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 4. Select **Link an existing Azure AD B2C Tenant to my Azure subscription,** and select the Tenant you just created in the dropdown list and the existing resource group **contososports-01**. Then, select **Create**.
 
-    ![In the Create new B2C Tenant or Link to existing Tenant blade, on the left, Link an existing Azure AD B2C Tenant to my Azure subscription is selected. On the right, in the Azure AD B2C Resource blade, the Azure AD B2C Tenant drop-down field is contosodb2ccustsitecp.onmicrosoft.com. The Resource group is using the existing contososports.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image159.png "Create new B2C Tenant or Link to existing Tenant")
+  ![](media/mca137.png)
 
 5. After creation completes, open the new Azure AD B2C tenant by selecting **Resource Groups** > **contososports-01** in the navigation menu to the left. Then, in the new blade, select the B2C tenant you just created.
 
@@ -1765,13 +1770,13 @@ Once done select **Review+create**.
 
   ![](media/mca101.png)
 
-7. Navigate to the Storage Account in the **contososports-01** resource group, select **contoso{uniqueid}** storage account.
+7. Navigate to the Storage Account in the **contososports-01** resource group, select **contosostorage{uniqueid}** storage account.
 
-  ![](media/mca102.png)
+  ![](media/mca128.png)
 
 8. Go to **Access Keys** present under **Settings** pane and copy the **Connection String** for the Storage Account. Paste your storage account connection string into Notepad to save for later.
 
-  ![](media/mca103.png)
+  ![](media/mca126.png)
 
 9. Navigate to the **Function App** that was just created, select **Configuration** and click on **New application setting**.
 
@@ -1833,7 +1838,7 @@ Once done select **Review+create**.
 
 20. Check your receipt PDF in the storage account blob.
 
-    - Navigate to the **contoso{uniqueid}** storage account.
+    - Navigate to the **contosostorage{uniqueid}** storage account.
     - Select the **Blobs** link.
 
   ![](media/mca113.png)
