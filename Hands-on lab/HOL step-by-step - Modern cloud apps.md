@@ -593,7 +593,7 @@ Then select **Revies+create**.
 
 6. Select the **Web App** for the Call Center Admin App by clicking on resource group dropdown. Then select **Finish**.
 
-  ![](media/mca33.png)
+  ![](media/mca138.png)
 
 7. Select **Publish**.
 
