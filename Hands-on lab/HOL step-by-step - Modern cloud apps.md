@@ -219,7 +219,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
   ![](media/mca129.png)
 
-4. On the **receiptgenerator** Service Bus Queue blade, select the **Shared access policies** link under Settings. Then open the **Publisher** shared access policy.
+3. On the **receiptgenerator** Service Bus Queue blade, select the **Shared access policies** link under Settings. Then open the **Publisher** shared access policy.
 
   ![](media/mca130.png)
 
@@ -227,7 +227,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
     >
     > By default, no policies are created. Additionally, it is best practice to use least privilege security to create separate shared access policies for publishers sending messages and listeners receiving messages from the queue. 
 
-6. On the **SAS Policy** pane, copy the **Primary Connection String**. Paste the value into **Notepad** for later usage. 
+4. On the **SAS Policy** pane, copy the **Primary Connection String**. Paste the value into **Notepad** for later usage. 
 
   ![](media/mca12.png)
 
