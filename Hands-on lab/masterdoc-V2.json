@@ -7,9 +7,9 @@
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/MCW-Modern-cloud-apps/master/Hands-on%20lab/lab-overview.md",
         "Order": 1
       },
-       {
+      {
         "RawFilePath": "https://raw.githubusercontent.com/junnhssn/MCW-Modern-cloud-apps/master/Hands-on%20lab/GettingStarted-V2.md",
-        "Order": 2
+        "Order": 2 
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/MCW-Modern-cloud-apps/master/Hands-on%20lab/01.md",
